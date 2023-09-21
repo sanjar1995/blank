@@ -1,0 +1,399 @@
+@import "fonts.css";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --main-color: #451F18;
+    --arrow-pos: 79px;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+body {
+    font-family: Gilroy;
+}
+button {
+    cursor: pointer;
+    font-family: Gilroy;
+    border: none;
+}
+.body {
+    padding: 140px 15px;
+    
+}
+.wrapper {
+    max-width: 1360px;
+    width: 100%;
+    background: #f9f6f4;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+.container {
+    max-width: 1190px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.title {
+    text-align: center;
+    color: var(--main-color);
+    font-family: Arkhip;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 50px;
+    margin-top: 60px;
+}
+.client-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.client-info__label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+.client-info__label > span {
+    color: var(--main-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+.client-info__input {
+    border: none;
+    background: transparent;
+    border-bottom: solid 1px var(--main-color);
+    flex-grow: 1;
+    color: var(--main-color);
+    font-family: Gilroy;
+    font-size: 30px;
+    font-weight: 300;
+}
+.client-info__input::placeholder {
+    color: var(--main-color);
+}
+.section-title {
+    color: var(--main-color);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.section-text {
+    color: var(--main-color);
+    font-size: 16px;
+}
+.about {
+    padding-top: 70px;
+}
+.about__text {
+    margin-bottom: 24px;
+}
+.skills__input {
+    pointer-events: none;
+    opacity: 0;
+}
+.skills__input:checked + .skills__img {
+    opacity: 1;
+}
+.skills__checkbox {
+    border-image: url(../images/label.png) 1;
+    border-image-width: 2px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    flex-shrink: 0;
+}
+.skills__img {
+    position: absolute;
+    left: 3px;
+    top: -7px;
+    opacity: 0;
+    pointer-events: none;
+}
+.skills__name {
+    color: var(--main-color);
+    font-size: 21px;
+    font-weight: 600;
+}
+.skills__label {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.skills {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skills__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    max-width: 530px;
+    width: 100%;
+}
+.degree-one {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.degree-line {
+    height: 2px;
+    background: url(../images/input-line.png);
+    margin-top: 112px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+.degree-line__mark {
+    position: absolute;
+    bottom: 5px;
+    left: var(--arrow-pos);
+    transform: translateX(-50%);
+    transition: 0.3s;
+}
+.degree-line__item {
+    position: relative;
+}
+.degree-line__name {
+    color: var(--main-color);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    max-width: 148px;
+    width: 100%;
+}
+.degree-line__name::before {
+    content: url(../images/mark.png);
+}
+.degree-line__icon {
+    position: absolute;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.degree-line__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    width: 80px;
+    height: 80px;
+}
+.degree-line__item.active .degree-line__img:nth-of-type(2) {
+    transform: translateY(-100%);
+}
+.calc {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.calc__range {
+    width: 435px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.calc__range[type="range"] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    /*background: url(../images/input-line.png);  Otherwise white in Chrome */
+    height: 2px;
+    background: transparent;
+}
+.calc__range[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: url(../images/arrow-mark.png) no-repeat center / contain;
+    height: 24px;
+    width: 24px;
+    transform: translateY(-20px);
+}
+.colc__content {
+    margin-top: 24px;
+}
+.calc__inner {
+    position: relative;
+    width: 412px;
+    display: flex;
+    justify-content: space-between;
+}
+.calc__inner::before {
+    content: "";
+    width: 450px;
+    position: absolute;
+    height: 2px;
+    object-fit: contain;
+    background: url(../images/input-line.png);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.calc-line__item {
+    position: relative;
+}
+.calc-line__name {
+    color: var(--main-color);
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    max-width: 148px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    transform: translateX(-50%);
+    width: max-content;
+}
+.calc-line__item::before {
+    content: url(../images/mark.png);
+}
+
+.calc__item {
+    display: flex;
+    align-items: baseline;
+    column-gap: 50px;
+    position: relative;
+    padding-top: 30px;
+    transform: translateX(20px);
+}
+.calc__input {
+    width: 86px;
+    padding: 11px 10px;
+    border-image: url(../images/label.png) 1;
+    background: transparent;
+    text-align: center;
+    color: var(--main-color);
+    font-family: Gilroy;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+}
+.colc__content {
+    display: flex;
+    justify-content: space-between;
+}
+.calc__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    user-select: none;
+}
+.calc__list-title{
+    color: var(--main-color);
+    font-size: 20px;
+}
+.future__list-label,
+.calc__list-label {
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+.future__list-radio,
+.calc__list-radio {
+    opacity: 0;
+    position: absolute;
+}
+.future__list-label,
+.calc__list-label {
+    position: relative;
+    display: flex;
+    column-gap: 15px;
+}
+.future__list-label::before,
+.calc__list-label::before {
+    content: url(../images/radio-circle.png);
+}
+.future__list-label::after,
+.calc__list-label::after {
+    content: url(../images/radio-dot.png);
+    position: absolute;
+    left: 5px;
+    top: -1px;
+    transition: 0.5s;
+    transform: scale(0);
+}
+.future__list-radio:checked + .future__list-label::after,
+.calc__list-radio:checked + .calc__list-label::after {
+    transform: scale(1);
+}
+.calc__summary {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+}
+.calc__summary-text {
+    color: var(--main-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+.calc__summary-span {
+    border-image: url(../images/label.png) 1;
+    outline: none;
+    background: transparent;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    padding: 10px 15px;
+    color: var(--main-color);
+    font-family: Gilroy;
+    font-size: 30px;
+    font-weight: 300;
+    border-bottom: 2px solid;
+}
+
+textarea {
+    line-height: 4ch;
+    background-image: linear-gradient(transparent, transparent calc(4ch - 1px), #51463d 2px);
+    background-size: 100% 4ch;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+    color: var(--main-color);
+    font-size: 30px;
+    font-family: Gilroy;
+    font-weight: 300;
+    outline: none;
+    resize: none;
+}
+.future{
+    padding-bottom: 75px;
+}
+.future__list {
+    margin-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 75px;
+}
+
+.future__text {
+    color: var(--main-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.future__text-span {
+    color: var(--main-color);
+    font-size: 30px;
+    font-weight: 300;
+    border-image: url(../images/input-line.png) 1;
+    border-bottom: 2px solid;
+    margin-left: 10px;
+}
+.future__text:nth-last-of-type(1) {
+    margin-top: 75px;
+}

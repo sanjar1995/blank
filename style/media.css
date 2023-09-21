@@ -1,0 +1,152 @@
+@media (max-width: 1050px) {
+    .colc__content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .calc__item:nth-of-type(1) {
+        row-gap: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .calc__summary {
+        position: static;
+    }
+    .skills {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+}
+@media (max-width: 700px) {
+    .future__list {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+    .future__text {
+        font-size: 20px;
+    }
+}
+@media (max-width: 619px) {
+    .calc__input {
+        width: 50px;
+    }
+}
+@media (max-width: 575px) {
+    .client-info__label > span {
+        font-size: 18px;
+    }
+    .client-info {
+        row-gap: 10px;
+    }
+    .client-info__input {
+        font-size: 20px;
+    }
+    .about {
+        padding-top: 30px;
+    }
+    .skills__name {
+        font-size: 18px;
+    }
+    .degree-one {
+        padding: 30px 0;
+    }
+    .degree-line__name {
+        font-size: 12px;
+    }
+    .degree-line__icon {
+        top: -90px;
+    }
+    .calc__inner {
+        width: 300px;
+    }
+    .calc__inner::before {
+        width: 350px;
+    }
+    .calc__range {
+        width: 322px;
+    }
+    .future__list {
+        justify-content: flex-start;
+        gap: 10px;
+        padding-bottom: 30px;
+    }
+    .future__text-span {
+        font-size: 20px;
+    }
+    .future__text {
+        font-size: 18px;
+    }
+    .future {
+        padding-bottom: 30px;
+    }
+    .future__text:nth-last-of-type(1) {
+        margin-top: 20px;
+    }
+    .body {
+        padding: 0;
+    }
+    .title {
+        margin: 20px 0;
+    }
+    .wrapper {
+        padding-top: 30px;
+    }
+}
+@media (max-width: 375px) {
+    .client-info__label > span {
+        font-size: 16px;
+    }
+    .container {
+        padding: 0 10px;
+    }
+    .client-info__input {
+        font-size: 16px;
+    }
+    .section-title {
+        font-size: 18px;
+    }
+    .calc__item {
+        transform: unset;
+    }
+    .calc__item {
+        column-gap: 20px;
+    }
+    .calc__list-title {
+        font-size: 18px;
+    }
+    .calc__list-label {
+        font-size: 14px;
+    }
+    .calc__list {
+        row-gap: 10px;
+    }
+    .calc {
+        padding-bottom: 30px;
+    }
+    .calc__list-label::after {
+        top: 4px;
+    }
+    textarea {
+        height: 125px;
+        font-size: 16px;
+    }
+    .calc__summary-span {
+        font-size: 20px;
+    }
+    .calc-line__name{
+        font-size: 12px;
+    }
+    .calc__item:nth-of-type(1){
+       row-gap: 20px;
+    }
+}
+@media(max-width:320px){
+    .calc__inner {
+        width: 280px;
+    }
+    .calc__inner::before {
+        width: 300px;
+    }
+    .calc__range {
+        width: 303px;
+    }
+}
