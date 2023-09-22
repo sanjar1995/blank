@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 :root {
-    --main-color: #451F18;
+    --main-color: #451f18;
     --arrow-pos: 79px;
 }
 a {
@@ -14,9 +14,7 @@ a {
 ul {
     list-style: none;
 }
-body {
-    font-family: Gilroy;
-}
+
 button {
     cursor: pointer;
     font-family: Gilroy;
@@ -24,7 +22,8 @@ button {
 }
 .body {
     padding: 140px 15px;
-    
+    font-family: Gilroy;
+    background: url(../images/bg-1.png);
 }
 .wrapper {
     max-width: 1360px;
@@ -288,7 +287,7 @@ button {
     row-gap: 16px;
     user-select: none;
 }
-.calc__list-title{
+.calc__list-title {
     color: var(--main-color);
     font-size: 20px;
 }
@@ -369,7 +368,7 @@ textarea {
     outline: none;
     resize: none;
 }
-.future{
+.future {
     padding-bottom: 75px;
 }
 .future__list {
